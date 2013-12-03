@@ -96,7 +96,7 @@ from main import views
 and the following to the ```urlpatterns``` section:
 
 ```python
-url(r'^$', views.index)
+url(r'^$', views.index, 'index')
 ```
 
 Run the application
