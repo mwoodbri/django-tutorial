@@ -111,5 +111,4 @@ Exercises
 ---------
 1. Create one or more extra studies using the Django shell and ensure that they display in your web browser
 1. Display the start date of each study in the template (Hint: use a date filter with the SHORT_DATE_FORMAT to make it more readable: https://docs.djangoproject.com/en/dev/ref/templates/builtins/#date)
-1. Modify the template to display the studies in a two-column HTML table, rather than as a list
-1. Apply some CSS to your table to distinguish alternate rows (Hint: this needs to go in the head of your HTML page. See http://www.w3.org/Style/Examples/007/evenodd.en.html) 
+1. Modify the template to display the studies in a two-column HTML table, rather than as a list. Then apply some CSS to your table to distinguish alternate rows (Hint: this needs to go in the head of your HTML page. See http://www.w3.org/Style/Examples/007/evenodd.en.html) 
