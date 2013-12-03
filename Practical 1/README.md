@@ -15,11 +15,13 @@ First we'll create a new project, then add and enable a main app
         Project name: CTU
         Next > Next > Finish
         Yes
+        
 1. Create a main app
 
         CTU > Django > Create application
         "main" > OK
-1. Enable it in settings.py
+        
+1. Enable it in ```settings.py```
 
         Add 'main' to INSTALLED_APPS
 
@@ -27,14 +29,13 @@ Adding a study model
 --------------------
 Now we'll create a model representing a clinical study, which corresponds to database table
 
-1. Add a class to models.py
+1. Add a class to ```models.py```:
 
     ```python
     class Study(models.Model):
         name = models.CharField(max_length=200)
         start_date = models.DateTimeField()
     ```
-
 1. Sync the new model to the database
 
         CTU > Django > Sync DB
@@ -111,4 +112,4 @@ Exercises
 ---------
 1. Create one or more extra studies using the Django shell and ensure that they display in your web browser
 1. Display the start date of each study in the template (Hint: use a date filter with the SHORT_DATE_FORMAT to make it more readable: https://docs.djangoproject.com/en/dev/ref/templates/builtins/#date)
-1. Modify the template to display the studies in a two-column HTML table, rather than as a list. Then apply some CSS to your table to distinguish alternate rows (Hint: this needs to go in the head of your HTML page. See http://www.w3.org/Style/Examples/007/evenodd.en.html) 
+1. Modify the template to display the studies in a two-column HTML table, rather than as a list. Then apply some CSS to your table to distinguish alternate rows (Hint: this needs to go in the head of your HTML page. See http://www.w3.org/Style/Examples/007/evenodd.en.html)
