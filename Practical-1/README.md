@@ -34,7 +34,7 @@ Now we'll create a model representing a clinical study, which corresponds to dat
     ```python
     class Study(models.Model):
         name = models.CharField(max_length=200)
-        start_date = models.DateTimeField()
+        start_date = models.DateField()
     ```
 1. Sync the new model to the database
 
