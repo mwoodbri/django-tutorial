@@ -11,14 +11,14 @@ First we'll create a new project, then add and enable a main app
 1. Create a new project
 
         File > New > Other...
-        PyDev > PyDev Django Project
+        PyDev > PyDev Django Project > Next
         Project name: CTU
         Next > Next > Finish
         Yes
         
 1. Create a main app
 
-        CTU > Django > Create application
+        CTU (right-click) > Django > Create application
         "main" > OK
         
 1. Enable it in ```settings.py```
@@ -39,15 +39,12 @@ Now we'll create a model representing a clinical study, which corresponds to dat
 1. Sync the new model to the database
 
         CTU > Django > Sync DB
-            "yes"
-            (blank)
-            (blank)
-            "password"
-            "password"
+            "no"
 
 1. Create an example study in the database
 
         CTU > Django > Shell with django environment
+            "OK"
             >>> from main.models import Study
             >>> from django.utils import timezone
             >>> study = Study(name="my study", start_date=timezone.now())
@@ -96,7 +93,7 @@ from main import views
 and the following to the ```urlpatterns``` section:
 
 ```python
-url(r'^$', views.index, 'index')
+url(r'^$', views.index, name='index')
 ```
 
 Run the application
@@ -104,7 +101,7 @@ Run the application
 Now we can run our application and check that it works
 
 1. ```CTU > Run As > PyDev Django```
-2. Open web browser and visit the address shown in PyDev Console
+2. Open web browser and visit the address shown in PyDev Console: http://127.0.0.1:8000/
 
 Exercises
 ---------
