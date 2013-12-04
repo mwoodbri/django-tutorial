@@ -52,7 +52,7 @@ Now we'll add a second page to our web application: a detailed view of a study l
 
         url(r'^study/(?P<study_id>\d+)$', views.study, name='study')
         
-1. Test your new page by visiting http://localhost:8000/study/1
+1. Test your new page by visiting http://127.0.0.1:8000/study/1
         
 1. Modify ```index.html``` to add hyperlinks to the details page for each row of your HTML table. Hint: replace ```{{ study.name }}``` with ```<a href="/study/{{ study.pk }}">{{ study.name }}</a>```
 
