@@ -1,6 +1,6 @@
 Practical 2
 ===========
-In this practical we'll add more features to our clinical trials management web application. You should finish with an application resembling [this example](http://ld-cisbic1.bc.ic.ac.uk:8000).
+In this practical we'll add more features to our clinical trials management web application. You should finish with an application resembling [this example](http://ld-cisbic1.bc.ic.ac.uk:8001).
 1. Create a data entry form
 ---------------------------
 To enable users of our system to add new studies we need an HTML form and some Python code to modify the database:
