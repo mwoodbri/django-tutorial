@@ -4,8 +4,8 @@ In this first practical we'll create a basic but fully functional Django app to 
 
 ![](https://raw.github.com/mwoodbri/django-tutorial/master/Practical-1/Study.png)
 
-Creating an empty project
--------------------------
+1. Creating an empty project
+----------------------------
 First we'll create a new project, then add and enable a main app
 
 1. Create a new project
@@ -25,8 +25,8 @@ First we'll create a new project, then add and enable a main app
 
         Add 'main' to INSTALLED_APPS
 
-Adding a study model
---------------------
+2. Adding a study model
+-----------------------
 Now we'll create a model representing a clinical study, which corresponds to database table
 
 1. Add a class to ```models.py```:
@@ -53,8 +53,8 @@ Now we'll create a model representing a clinical study, which corresponds to dat
             >>> study.id
             >>> Study.objects.all()
 
-Creating a template for a study
---------------------------------------
+3. Creating a template for a study
+----------------------------------
 We'll now create an HTML page for displaying a study. Add a ```templates``` folder under the ```main``` folder and create a new file named ```index.html```:
 
 ```html
@@ -69,8 +69,8 @@ We'll now create an HTML page for displaying a study. Add a ```templates``` fold
 </body></html>
 ```
 
-Creating a view for a study
----------------------------
+4. Creating a view for a study
+------------------------------
 The template receives a list of studies that must first be retrieved from the database. Add the following to ```views.py```:
 
 ```python
@@ -82,8 +82,8 @@ def index(request):
     return render(request, 'index.html', {'studies': studies})
 ```
 
-Adding our view to the URL dispatcher
--------------------------------------
+5. Adding our view to the URL dispatcher
+----------------------------------------
 Finally we have to tell our application to route HTTP requests from the root URL ("/") to our new view. Add the following to the header of ```urls.py```:
 
 ```python
@@ -96,8 +96,8 @@ and the following to the ```urlpatterns``` section:
 url(r'^$', views.index, name='index')
 ```
 
-Run the application
--------------------
+6. Run the application
+----------------------
 Now we can run our application and check that it works
 
 1. ```CTU > Run As > PyDev Django```
