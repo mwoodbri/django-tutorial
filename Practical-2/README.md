@@ -16,6 +16,12 @@ To enable users of our system to add new studies we need an HTML form and some P
         from django.http import HttpResponseRedirect
         from django.core.urlresolvers import reverse
 
+1. Add an entry to ```urlpatterns``` in ```urls.py```:
+
+        url(r'^create$', views.create, name='create'),
+        
+1. Try creating some new studies in your web browser
+
 Add a new model
 ---------------
 To represent a real study we also need to record the patients who are enrolled. We'll extend our schema:
@@ -34,18 +40,20 @@ We do this by creating a Patient model:
 
 1. Add an extra column to the HTML table on the main page of our web application that shows the number of patients for each study. Hint 1: the syntax to return the collection of patients for a study is ```study.patient_set.all```. Hint 2: the filter to display the length of a collection in a template is ```{{ collection|length }}```
 
+1. Check that the patient counts are displayed directly in the web browser
+
 Add a second view
 -----------------
 Now we'll add a second page to our web application: a detailed view of a study listing its patients.
 
 1. Create a new file called ```study.html``` in ```templates```, similar to ```index.html``` but the ```<body>``` element should just contain:
 
-        <h2>{{{ study.name }}}</h2>
+        <h1>Study: {{ study.name }}</h1>
         <p>Patients:</p>
         <ul>
-          {% for patient in study.patient_set %}
+          {% for patient in study.patient_set.all %}
           <li>{{ patient.first_name }} {{ patient.last_name}}</li>
-          %{ endfor %}
+          {% endfor %}
         </ul>
 
 1. Add another function to ```views.py``` named ```study```, similar to ```index``` but with two arguments: ```request``` and ```study_id```. The first line should retrieve the required ```Study``` from the database:
