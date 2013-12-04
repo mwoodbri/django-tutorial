@@ -1,8 +1,8 @@
 Practical 2
 ===========
 In this practical we'll add more features to our clinical trials management web application.
-Create a data entry form
-------------------------
+1. Create a data entry form
+---------------------------
 To enable users of our system to add new studies we need an HTML form and some Python code to modify the database:
 
 1. Add a form (as shown in the "Forms" section of the lecture notes) to the ```<body>``` of your existing ```index.html```
@@ -22,8 +22,8 @@ To enable users of our system to add new studies we need an HTML form and some P
         
 1. Try creating some new studies in your web browser
 
-Add a new model
----------------
+2. Add a new model
+------------------
 To represent a real study we also need to record the patients who are enrolled. We'll extend our schema:
 
 ![](https://raw.github.com/mwoodbri/django-tutorial/master/Practical-2/StudyPatient.png)
@@ -42,8 +42,8 @@ We do this by creating a Patient model:
 
 1. Check that the patient counts are displayed directly in the web browser
 
-Add a second view
------------------
+3. Add a second view
+--------------------
 Now we'll add a second page to our web application: a detailed view of a study listing its patients.
 
 1. Create a new file called ```study.html``` in ```templates```, similar to ```index.html``` but the ```<body>``` element should just contain:
@@ -70,8 +70,8 @@ Now we'll add a second page to our web application: a detailed view of a study l
         
 1. Modify ```index.html``` to add hyperlinks to the details page for each row of your HTML table. Hint: replace ```{{ study.name }}``` with ```<a href="/study/{{ study.pk }}">{{ study.name }}</a>```
 
-Template inheritance
---------------------
+4. Template inheritance
+-----------------------
 The ```index.html``` and ```study.html``` now have now duplicated HTML code. Extract the common elements into a file named ```base.html``` (as shown in the notes) and edit ```index.html``` and ```study.html``` to specify ```title``` and ```content``` blocks.
 
 Optional exercises
