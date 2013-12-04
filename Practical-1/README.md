@@ -1,6 +1,8 @@
 Practical 1
 ===========
-In this first practical we'll create a basic but fully functional Django app to manage studies run by a ficticious Clinical Trials Unit. We'll include a single model representing a study:
+In this first practical we'll create a basic but fully functional Django app to manage studies run by a ficticious Clinical Trials Unit. You will create an application resembling [this example](http://ld-cisbic1.bc.ic.ac.uk:8000/).
+
+We'll include a single model representing a study:
 
 ![](https://raw.github.com/mwoodbri/django-tutorial/master/Practical-1/Study.png)
 
