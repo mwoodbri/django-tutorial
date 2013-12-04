@@ -5,10 +5,16 @@ Create a data entry form
 ------------------------
 To enable users of our system to add new studies we need an HTML form and some Python code to modify the database:
 
-1. Add a form (as shown in the lecture notes) to your existing ```index.html```
+1. Add a form (as shown in the "Forms" section of the lecture notes) to the ```<body>``` of your existing ```index.html```
 1. Add a corresponding function to ```views.py```, similar to that shown in the lecture notes, but with a couple of extra lines of code to a) create a Study with the relevant name (and today's date) and b) store it in the database. This code is similar to that used in the Django shell in Practical 1. After creating the Study you'll need to redirect the browser back to the main page like this:
 
         return HttpResponseRedirect(reverse('index'))
+        
+    You'll need some extra imports:
+    
+        from django.utils import timezone
+        from django.http import HttpResponseRedirect
+        from django.core.urlresolvers import reverse
 
 Add a new model
 ---------------
@@ -26,7 +32,7 @@ We do this by creating a Patient model:
         >>> patient = Patient(first_name="foo", last_name="bar", study=study)
         >>> patient.save()
 
-1. Add an extra column to the HTML table on the main page of our web application that shows the number of patients for each study. Hint 1: the syntax to return the patients for a study is ```study.patient_set```. Hint 2: the filter to display the length of a collection in a template is ```{{ collection|length }}```
+1. Add an extra column to the HTML table on the main page of our web application that shows the number of patients for each study. Hint 1: the syntax to return the collection of patients for a study is ```study.patient_set.all```. Hint 2: the filter to display the length of a collection in a template is ```{{ collection|length }}```
 
 Add a second view
 -----------------
