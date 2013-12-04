@@ -32,17 +32,33 @@ Add a second view
 -----------------
 Now we'll add a second page to our web application: a detailed view of a study listing its patients.
 
+1. Create a new file called ```study.html``` in ```templates```, similar to ```index.html``` but the ```<body>``` element should just contain:
+
+        <h2>{{{ study.name }}}</h2>
+        <p>Patients:</p>
+        <ul>
+          {% for patient in study.patient_set %}
+          <li>{{ patient.first_name }} {{ patient.last_name}}</li>
+          %{ endfor %}
+        </ul>
+
 1. Add another function to ```views.py``` named ```study```, similar to ```index``` but with two arguments: ```request``` and ```study_id```. The first line should retrieve the required ```Study``` from the database:
 
         study = Study.objects.get(pk=study_id)
 
-The second line should call ```render```, like ```index``` but for ```study.html``` and passing ```study``` rather than ```studies```.
+    The second line should call ```render```, like ```index``` but for ```study.html``` and passing ```study``` rather than ```studies```.
 
 1. Add an extra line to ```urls.py``` to dispatch requests to your new view:
 
         url(r'^study/(?P<study_id>\d+)$', views.study, name='study')
         
+1. Test your new page by visiting http://localhost:8000/study/1
+        
 1. Modify ```index.html``` to add hyperlinks to the details page for each row of your HTML table. Hint: replace ```{{ study.name }}``` with ```<a href="/study/{{ study.pk }}">{{ study.name }}</a>```
+
+Template inheritance
+--------------------
+The ```index.html``` and ```study.html``` now have now duplicated HTML code. Extract the common elements into a file named ```base.html``` (as shown in the notes) and edit ```index.html``` and ```study.html``` to specify ```title``` and ```content``` blocks.
 
 Optional exercises
 ------------------
