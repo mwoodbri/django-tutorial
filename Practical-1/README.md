@@ -58,7 +58,7 @@ Now we'll create a model representing a clinical study, which corresponds to dat
 
 Creating a template for a study
 --------------------------------------
-We'll now create an HTML page for displaying a study. Add a ```templates``` folder under the ```main``` folder and create a new file named ```index.html``` containing:
+We'll now create an HTML page for displaying a study. Add a ```templates``` folder under the ```main``` folder and create a new file named ```index.html```:
 
 ```html
 <!DOCTYPE html>
@@ -106,10 +106,8 @@ Now we can run our application and check that it works
 1. ```CTU > Run As > PyDev Django```
 2. Open web browser and visit the address shown in PyDev Console
 
-TODO enable reload
-
 Exercises
 ---------
 1. Create one or more extra studies using the Django shell and ensure that they display in your web browser
-1. Display the start date of each study in the template (Hint: use a date filter with the SHORT_DATE_FORMAT to make it more readable: https://docs.djangoproject.com/en/dev/ref/templates/builtins/#date)
-1. Modify the template to display the studies in a two-column HTML table, rather than as a list. Then apply some CSS to your table to distinguish alternate rows (Hint: this needs to go in the head of your HTML page. See http://www.w3.org/Style/Examples/007/evenodd.en.html)
+1. Display the start date of each study in the template. Optional: use a [SHORT_DATE_FORMAT filter](https://docs.djangoproject.com/en/dev/ref/templates/builtins/#date) to make the date more readable.
+1. Modify the template to display the studies in a two-column HTML table, rather than as a list. Optional: apply [some CSS](http://www.w3.org/Style/Examples/007/evenodd.en.html) to the head of your HTML page to distinguish alternate rows in your table.
