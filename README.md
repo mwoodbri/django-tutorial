@@ -32,3 +32,4 @@ Todo
 * Move table creation to Pratical 2, to be done at same time as display of patient count
 * Remove date filter
 * Remove study.id from console
+* Update Django, PyDev (and Python?) versions 
