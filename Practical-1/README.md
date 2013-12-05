@@ -55,9 +55,9 @@ Now we'll create a model representing a clinical study, which corresponds to dat
             >>> study.id
             >>> Study.objects.all()
 
-3. Creating a template for a study
-----------------------------------
-We'll now create an HTML page for displaying a study. Add a ```templates``` folder under the ```main``` folder and create a new file named ```index.html```:
+3. Creating a template to list studies
+--------------------------------------
+We'll now create an HTML page for listing our studies. Add a ```templates``` folder under the ```main``` folder and create a new file named ```index.html```:
 
 ```html
 <!DOCTYPE html>
@@ -71,8 +71,8 @@ We'll now create an HTML page for displaying a study. Add a ```templates``` fold
 </body></html>
 ```
 
-4. Creating a view for a study
-------------------------------
+4. Creating a view to list studies
+----------------------------------
 The template receives a list of studies that must first be retrieved from the database. Add the following to ```views.py```:
 
 ```python
