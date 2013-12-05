@@ -68,7 +68,9 @@ Now we'll add a second page to our web application: a detailed view of a study l
         
 1. Test your new page by visiting http://127.0.0.1:8000/study/1
         
-1. Modify ```index.html``` to add hyperlinks to the details page for each row of your HTML table. Hint: replace ```{{ study.name }}``` with ```<a href="/study/{{ study.pk }}">{{ study.name }}</a>```
+1. Modify ```index.html``` to add hyperlinks to the details page for each row of your HTML table. Hint: replace ```{{ study.name }}``` with a link ```<a href="/study/{{ study.pk }}">{{ study.name }}</a>```
+
+Your application should now resemble [the example](http://ld-cisbic1.bc.ic.ac.uk:8001).
 
 4. Template inheritance
 -----------------------
