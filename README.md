@@ -26,3 +26,9 @@ Notes
 * The Django web server is set to ```--noreload``` by default .This means you’ll have to restart it whenever you change your code unless you change the configuration (ask us).
 * If you want to keep the code that you write during the practical then you’ll need to copy your workspace onto your network drive at the end
 
+Todo
+----
+* Move all data modelling to Practical 1 to workaround lack of migrations in Django 1.5
+* Move table creation to Pratical 2, to be done at same time as display of patient count
+* Remove date filter
+* Remove study.id from console
