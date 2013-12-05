@@ -30,7 +30,7 @@ First we'll create a new project, then add and enable a main app
 
 2. Adding a study model
 -----------------------
-Now we'll create a model representing a clinical study, which corresponds to database table
+Now we'll create a model representing a clinical study, which corresponds to a database table
 
 1. Add a class to ```models.py```:
 
