@@ -27,6 +27,7 @@ First we'll create a new project, then add and enable a main app
 
         Add 'main' to INSTALLED_APPS
 
+
 2. Adding a study model
 -----------------------
 Now we'll create a model representing a clinical study, which corresponds to database table
@@ -54,6 +55,7 @@ Now we'll create a model representing a clinical study, which corresponds to dat
             >>> study.save()
             >>> study.id
             >>> Study.objects.all()
+
 
 3. Creating a template to list studies
 --------------------------------------
