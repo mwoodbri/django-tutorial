@@ -108,5 +108,11 @@ Now we can run our application and check that it works
 Exercises
 ---------
 1. Create one or more extra studies using the Django shell and ensure that they display in your web browser
-1. Display the start date of each study in the template. Optional: use a [SHORT_DATE_FORMAT filter](https://docs.djangoproject.com/en/dev/ref/templates/builtins/#date) to make the date more readable.
-1. Modify the template to display the studies in a two-column HTML table, rather than as a list. Optional: apply [some CSS](http://www.w3.org/Style/Examples/007/evenodd.en.html) to the head of your HTML page to distinguish alternate rows in your table.
+1. Display the start date of each study in the template. **Optional**: use a [SHORT_DATE_FORMAT filter](https://docs.djangoproject.com/en/dev/ref/templates/builtins/#date) to make the date more readable.
+1. Modify the template to display the studies in a two-column HTML table, instead of a list, using ```<table>```, ```<tr>```, ```<th>``` and ```<td>``` tags
+1. Add some style to your page using Bootstrap. Add a reference to the stylesheet in the ```<head>``` of ```index.html```:
+
+        <link href="//netdna.bootstrapcdn.com/bootstrap/3.0.2/css/bootstrap.min.css" rel="stylesheet">
+        
+    Then add an attribute ```class="container"``` to your ```<body>``` tag, and an attribute ```class="table"``` to your ```<table>``` tag.
+1. Check that your web application resembles [the example](http://ld-cisbic1.bc.ic.ac.uk:8000/)
