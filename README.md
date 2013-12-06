@@ -7,6 +7,7 @@ Getting started
 1. Start Eclipse:
 	
         Start > All Programs > eclipse
+
 1. Create a workspace **on the C: drive** for your Python projects:
 	
         File > Switch Workspace > Other...
@@ -15,6 +16,7 @@ Getting started
 1. Configure the Python interpreter:
 
         Window > Preferences > PyDev > Interpreter - Python > Auto Config > OK > OK
+
 1. Close the Welcome screen
 
 Slides
@@ -28,8 +30,5 @@ Notes
 
 Todo
 ----
-* Move all data modelling to Practical 1 to workaround lack of migrations in Django 1.5
-* Move table creation to Pratical 2, to be done at same time as display of patient count
-* Remove date filter
-* Remove study.id from console
+* Move all data modelling to Practical 1 to work around lack of migrations in Django 1.5
 * Update Django, PyDev (and Python?) versions 
