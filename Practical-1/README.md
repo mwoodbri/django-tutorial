@@ -63,11 +63,12 @@ We'll now create an HTML page for listing our studies. Add a ```templates``` fol
 <!DOCTYPE html>
 <html><head><title>CTU</title></head><body>
   <h1>Studies</h1>
-  <ul>
+  <table>
+    <tr><th>Name</th></tr>
     {% for study in studies %}
-    <li>{{ study.name }}</li>
+    <tr><td>{{ study.name }}</td></tr>
     {% endfor %}
-  </ul>
+  </table>
 </body></html>
 ```
 
@@ -108,8 +109,7 @@ Now we can run our application and check that it works
 Exercises
 ---------
 1. Create one or more extra studies using the Django shell and ensure that they display in your web browser
-1. Display the start date of each study in the template. **Optional**: use a [SHORT_DATE_FORMAT filter](https://docs.djangoproject.com/en/dev/ref/templates/builtins/#date) to make the date more readable.
-1. Modify the template to display the studies in a two-column HTML table, instead of a list, using ```<table>```, ```<tr>```, ```<th>``` and ```<td>``` tags
+1. Display the start date of each study in the template by adding a column to the HTML table
 1. Add some style to your page using Bootstrap. Add a reference to the stylesheet in the ```<head>``` of ```index.html```:
 
         <link href="//netdna.bootstrapcdn.com/bootstrap/3.0.2/css/bootstrap.min.css" rel="stylesheet">
