@@ -51,10 +51,8 @@ Now we'll create a model representing a clinical study, which corresponds to a d
             >>> from main.models import Study
             >>> from django.utils import timezone
             >>> study = Study(name="my study", start_date=timezone.now())
-            >>> study.id
             >>> study.save()
-            >>> study.id
-            >>> Study.objects.all()
+            >>> Study.objects.count()
 
 
 3. Creating a template to list studies
@@ -82,7 +80,7 @@ from models import Study
 from django.shortcuts import render
 
 def index(request):
-    studies = Study.objects.all().order_by('-start_date')[:5]
+    studies = Study.objects.all().order_by('name')
     return render(request, 'index.html', {'studies': studies})
 ```
 
